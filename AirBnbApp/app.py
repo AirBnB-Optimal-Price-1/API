@@ -37,7 +37,7 @@ def create_app():
     @app.route('/data/bycity/<city>', methods=['GET','POST'])
     def city(city):
         info_city = get_df()
-        df_city = info_city[info_city['city'] == city]
+        df_city = info_city[info_city['city'] == city.upper()]
         return render_template('bycity.html', city=df_city.to_html(index=False))
 
     
