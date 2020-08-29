@@ -46,7 +46,7 @@ def create_app():
         city = str(request.args['city'])
         room_type = str(request.args['room_type'])
         info = get_df()
-        df_city = info[info['city'] == city]
+        df_city = info[info['city'] == city.upper()]
         df_type = df_city[df_city['room_type'] == room_type]
         return render_template('byroomtype.html', roomtype=df_type.to_html(index=False))
 
