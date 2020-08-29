@@ -38,3 +38,4 @@ def pre(city='United States', room_type='any', security_deposit=0.0, guests_incl
 
     return f'city: {city}, room_type: {room_type}, security_deposit: {security_deposit}, guests_included: {guests_included}, min_nights: {min_nights}, price: ${pred:.2f}'
 
+
