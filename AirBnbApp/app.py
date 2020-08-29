@@ -59,13 +59,8 @@ def create_app():
         guests_included = int(request.args['guests_included'])
         mininum_nights = int(request.args['mininum_nights'])
 
-        # breakpoint()
-        prediction = pre()
-        return prediction
-        # return jsonify({"City":city,
-        #             "Room_Type":room_type,
-        #             "Security_Deposit": security_deposit,
-        #             "Guests_Included": guests_included,
-        #             "Minimum_Nights": mininum_nights
-        #             })
+        prediction = pre(city=city, room_type=room_type, security_deposit=security_deposit, guests_included=guests_included, min_nights=mininum_nights)
+
+        return jsonify(prediction)
+        
     return app
