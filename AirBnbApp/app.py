@@ -11,7 +11,7 @@ def create_app():
 
     app = Flask(__name__)
     def get_df():
-        data_file = open('AirBnbApp/airbnb.csv')
+        data_file = open('/app/AirBnbApp/airbnb.csv')
         csv_file = csv.reader(data_file)
         info = []
         for row in csv_file:
